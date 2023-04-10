@@ -1,0 +1,48 @@
+All Defaults:
+python trainer.py -d autism -m CNNModel -em Happy,Sadness,Angry,Neutral,Other -sm 1 -scm 1 -sth 1 -n defaults
+
+Base:
+python trainer.py -d autism -m CNNModel -em Happy,Sadness,Angry,Neutral,Other -sm 1 -scm 1 -sth 1 -tr .8 -bs 20 -n base
+
+Datagen 1:
+python trainer.py -d autism -m CNNModel -em Happy,Sadness,Angry,Neutral,Other -sm 1 -scm 1 -sth 1 -tr .8 -bs 20 -tg 1 -n dg1
+
+Datagen 2:
+python trainer.py -d autism -m CNNModel -em Happy,Sadness,Angry,Neutral,Other -sm 1 -scm 1 -sth 1 -tr .8 -bs 20 -tg 2 -n dg2
+
+Datagen 3:
+python trainer.py -d autism -m CNNModel -em Happy,Sadness,Angry,Neutral,Other -sm 1 -scm 1 -sth 1 -tr .8 -bs 20 -tg 3 -n dg3
+
+bs 25:
+python trainer.py -d autism -m CNNModel -em Happy,Sadness,Angry,Neutral,Other -sm 1 -scm 1 -sth 1 -tr .8 -bs 25 -tg 3 -n dg25
+
+bs 15:
+python trainer.py -d autism -m CNNModel -em Happy,Sadness,Angry,Neutral,Other -sm 1 -scm 1 -sth 1 -tr .8 -bs 15 -tg 3 -n dg15
+
+tr .75:
+python trainer.py -d autism -m CNNModel -em Happy,Sadness,Angry,Neutral,Other -sm 1 -scm 1 -sth 1 -tg 3 -bs 20 -tr .75 -n tr75
+
+tr .80:
+python trainer.py -d autism -m CNNModel -em Happy,Sadness,Angry,Neutral,Other -sm 1 -scm 1 -sth 1 -tg 3 -bs 20 -tr .8 -n tr80
+
+ep 60:
+python trainer.py -d autism -m CNNModel -em Happy,Sadness,Angry,Neutral,Other -sm 1 -scm 1 -sth 1 -tg 3 -bs 20 -tr .85 -ep 60 -n ep60
+
+ep 70:
+python trainer.py -d autism -m CNNModel -em Happy,Sadness,Angry,Neutral,Other -sm 1 -scm 1 -sth 1 -tg 3 -bs 20 -tr .85 -ep 70 -n ep70
+
+o nadam:
+python trainer.py -d autism -m CNNModel -em Happy,Sadness,Angry,Neutral,Other -sm 1 -scm 1 -sth 1 -tg 3 -bs 20 -tr .85 -ep 50 -o nadam -n nadam
+
+lr .02:
+python trainer.py -d autism -m CNNModel -em Happy,Sadness,Angry,Neutral,Other -sm 1 -scm 1 -sth 1 -tg 3 -bs 20 -tr .85 -ep 50 -o adam -lr .02 -n lr02
+
+lr .03:
+python trainer.py -d autism -m CNNModel -em Happy,Sadness,Angry,Neutral,Other -sm 1 -scm 1 -sth 1 -tg 3 -bs 20 -tr .85 -ep 50 -o adam -lr .03 -n lr03
+
+
+
+------- What we've learned -------
+
+final:
+python trainer.py -d autism -m CNNModel -em Happy,Sadness,Angry,Neutral,Other -sm 1 -scm 1 -sth 1 -tg 3 -bs 20 -tr .85 -ep 50 -o adam -lr .01 -n final

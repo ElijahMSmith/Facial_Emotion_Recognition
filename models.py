@@ -59,18 +59,18 @@ class BaseModel():
             fig = pyplot.figure(0, (12, 4))
 
             ax = pyplot.subplot(1, 2, 1)
-            sns.lineplot(self.history.epoch, self.history.history['accuracy'], label='train')
+            sns.lineplot(x=self.history.epoch, y=self.history.history['accuracy'], label='train')
             try:
-                sns.lineplot(self.history.epoch, self.history.history['val_accuracy'], label='valid')
+                sns.lineplot(x=self.history.epoch, y=self.history.history['val_accuracy'], label='valid')
             except KeyError:
                 pass
             pyplot.title('Accuracy')
             pyplot.tight_layout()
 
             ax = pyplot.subplot(1, 2, 2)
-            sns.lineplot(self.history.epoch, self.history.history['loss'], label='train')
+            sns.lineplot(x=self.history.epoch, y=self.history.history['loss'], label='train')
             try:
-                sns.lineplot(self.history.epoch, self.history.history['val_loss'], label='valid')
+                sns.lineplot(x=self.history.epoch, y=self.history.history['val_loss'], label='valid')
             except KeyError:
                 pass
             pyplot.title('Loss')
